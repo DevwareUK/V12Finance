@@ -1,0 +1,22 @@
+{
+    "name": "devwareuk/v12finance",
+    "description": "API wrapper for V12 Finance",
+    "keywords": ["v12finance", "v12", "finance", "payment"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Devware LTD",
+            "email": "info@devware.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevwareUK\\V12Finance\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.0"
+    }
+}

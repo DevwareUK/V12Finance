@@ -6,7 +6,7 @@ namespace DevwareUK\V12Finance\Request;
 
 use DevwareUK\V12Finance\Models\Chain;
 
-class SettlementRequest {
+class SettlementRequest implements RequestInterface {
   protected $Chain;
   protected $DateFrom;
   protected $DateTo;

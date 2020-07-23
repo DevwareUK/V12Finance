@@ -7,7 +7,7 @@ use DevwareUK\V12Finance\Models\Retailer;
 use DevwareUK\V12Finance\Models\Order;
 use DevwareUK\V12Finance\Models\Customer;
 
-class ApplicationRequest {
+class ApplicationRequest implements RequestInterface {
   protected $Retailer;
   protected $Order;
   protected $Customer;

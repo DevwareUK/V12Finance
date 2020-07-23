@@ -7,16 +7,29 @@ use DevwareUK\V12Finance\Errors\ApplicationStatusResponseError;
 use DevwareUK\V12Finance\Models\FinanceProduct;
 use DevwareUK\V12Finance\Traits\JsonEncodeable;
 
-class FinanceProductListResponse {
-  // @TODO implement this...
+class FinanceProductListResponse extends ResponseAbstract {
   protected $Errors;
   protected $FinanceProducts;
 
   use JsonEncodeable;
 
+  /**
+   * FinanceProductListResponse constructor.
+   *
+   * @param $errors
+   * @param $finance_products
+   *
+   * @throws \DevwareUK\V12Finance\Exceptions\ResponseException
+   */
   public function __construct($errors, $finance_products) {
     $this->Errors = $errors;
     $this->FinanceProducts = $finance_products;
+
+    parent::__construct();
+  }
+
+  public function getFinanceProducts() : array {
+    return isset($this->FinanceProducts) ? $this->FinanceProducts : [];
   }
 
   public static function newFromJSON($json) : FinanceProductListResponse {

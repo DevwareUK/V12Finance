@@ -6,7 +6,7 @@ namespace DevwareUK\V12Finance\Request;
 use DevwareUK\V12Finance\Models\Retailer;
 use DevwareUK\V12Finance\Traits\JsonEncodeable;
 
-class FinanceProductListRequest {
+class FinanceProductListRequest implements RequestInterface {
   protected $Retailer;
 
   use JsonEncodeable;

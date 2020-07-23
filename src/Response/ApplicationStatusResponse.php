@@ -9,19 +9,19 @@ use DevwareUK\V12Finance\Models\Customer;
 use DevwareUK\V12Finance\Models\Financials;
 use DevwareUK\V12Finance\Models\OrderLine;
 
-class ApplicationStatusResponse {
-  public $ApplicationFormUrl;
-  public $ApplicationGuid;
-  public $ApplicationId;
-  public $AuthorisationCode;
-  public $Customer;
-  public $Errors;
-  public $Financials;
-  public $OrderLines;
-  public $SalesReference;
-  public $SecondSalesReference;
-  public $Status;
-  public $CreditPolicyTag;
+class ApplicationStatusResponse extends ResponseAbstract {
+  protected $ApplicationFormUrl;
+  protected $ApplicationGuid;
+  protected $ApplicationId;
+  protected $AuthorisationCode;
+  protected $Customer;
+  protected $Errors;
+  protected $Financials;
+  protected $OrderLines;
+  protected $SalesReference;
+  protected $SecondSalesReference;
+  protected $Status;
+  protected $CreditPolicyTag;
 
   use JsonEncodeable;
 
@@ -38,6 +38,20 @@ class ApplicationStatusResponse {
     $this->SecondSalesReference = $second_sales_reference;
     $this->Status = $status;
     $this->CreditPolicyTag = $credit_policy_tag;
+
+    parent::__construct();
+  }
+
+  public function getApplicationId() {
+    return $this->ApplicationId;
+  }
+
+  public function getApplicationFormUrl() {
+    return $this->ApplicationFormUrl;
+  }
+
+  public function getStatus() {
+    return $this->Status;
   }
 
   public static function newFromJSON($json) : ApplicationStatusResponse {

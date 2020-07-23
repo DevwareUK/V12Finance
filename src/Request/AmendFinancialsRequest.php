@@ -4,6 +4,6 @@
 namespace DevwareUK\V12Finance\Request;
 
 
-class AmendFinancialsRequest {
+class AmendFinancialsRequest implements RequestInterface  {
 
 }

@@ -4,7 +4,7 @@
 namespace DevwareUK\V12Finance\Request;
 
 
-class ApplicationUpdateRequest {
+class ApplicationUpdateRequest implements RequestInterface {
   // @TODO this is weird.... Look at the docs....
   protected $ApplicationId;
   protected $Retailer;

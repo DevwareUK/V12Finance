@@ -5,7 +5,7 @@ namespace DevwareUK\V12Finance\Request;
 use DevwareUK\V12Finance\Traits\JsonEncodeable;
 use DevwareUK\V12Finance\Models\Retailer;
 
-class ApplicationStatusRequest {
+class ApplicationStatusRequest implements RequestInterface {
   protected $ApplicationId;
   protected $Retailer;
   protected $IncludeExtraDetails;

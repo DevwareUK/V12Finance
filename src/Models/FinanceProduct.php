@@ -21,7 +21,7 @@ class FinanceProduct {
   protected $MinLoan;
   protected $MonthlyRate;
   protected $Months;
-  protected $Name;
+  public $Name;
   protected $OptionPeriod;
   protected $ProductGuid;
   protected $ProductId;
